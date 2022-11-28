@@ -1,3 +1,2 @@
 #!/bin/bash
-python3 $PYCODE
-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
+py $PYFILE
