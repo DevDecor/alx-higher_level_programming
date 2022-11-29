@@ -3,4 +3,4 @@ for a in range(0, 100):
     if a < 99:
         print("{:0>2d}, ".format(a), end='')
     else:
-        print("{}".format(a), end='')
+        print("{}\n".format(a), end='')
