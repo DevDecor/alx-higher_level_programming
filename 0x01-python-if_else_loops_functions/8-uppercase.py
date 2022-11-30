@@ -7,4 +7,3 @@ def uppercase(s):
             continue
         b = b + s[i]
     print(b)
-uppercase("This is a Sentense of 10")
