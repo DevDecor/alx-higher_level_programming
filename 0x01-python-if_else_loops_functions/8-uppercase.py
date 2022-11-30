@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 def uppercase(s):
-    for i in s:
-        if ord(i) >= 97 and ord(i) <= 122:
-            print("{:c}".format(ord(i) - 32), end='')
+    b = ""
+    for i in range(0, len(s)):
+        if ord(s[i]) >= 97 and ord(s[i]) <= 122:
+            b = b + "{:c}".format(ord(s[i]) - 32)
             continue
-        print(i, end='')
+        b = b + s[i]
+    print(b)
+uppercase("This is a Sentense of 10")
