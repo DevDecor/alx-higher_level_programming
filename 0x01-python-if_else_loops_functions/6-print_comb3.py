@@ -9,6 +9,7 @@ for i in range(1, 90):
             break
     if found == 1:
         continue
-    print(f"{i:0>2d}", end="")
+    print("{:0>2d}".format(i), end="")
     if i != 89:
         print(f", ", end="")
+print('\n', end='')
