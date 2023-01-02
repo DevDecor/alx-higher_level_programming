@@ -55,3 +55,7 @@ class Rectangle:
                 x = x + "#"
             x = x + "\n"
         return x
+
+    def __repr__(self):
+        """Representation"""
+        return type(self)
