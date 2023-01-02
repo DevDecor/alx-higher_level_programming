@@ -53,6 +53,9 @@ class Rectangle:
         for i in range(self.height):
             for j in range(self.width):
                 x = x + "#"
-            if i != self.height - 1:
-                x = x + "\n"
+            x = x + "\n"
         return x
+
+    def __repr__(self):
+        """Representation"""
+        return type(self)
