@@ -5,7 +5,9 @@
 class Rectangle:
     """Rectangle defined"""
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
+        """Constructor"""
         Rectangle.number_of_instances += 1
         self.width, self.height = width, height
 
@@ -65,5 +67,5 @@ class Rectangle:
 
     def __del__(self):
         """I am Dying"""
-        Rectangle.number_of_instances -= 1 
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
