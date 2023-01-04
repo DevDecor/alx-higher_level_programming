@@ -1,0 +1,42 @@
+===========================================
+Say my name function ```say_my_name(...)```
+===========================================
+
+The function prints full
+
+Usage
+=====
+
+```say_my_name(first_name, last_name="")``` prints my full name
+
+::
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("Tiamiyu")
+	My name is Tiamiyu 
+
+Default last name used
+
+::
+	>>> say_my_name("Tiamiyu", "Abdussomad")
+	My name is Tiamiyu Abdussomad
+
+Wrong inputs
+============
+
+::
+	>>> say_my_name(None, None)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+::
+	>>> say_my_name("Jane", None)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+::
+	>>> say_my_name(None, "Jane")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
