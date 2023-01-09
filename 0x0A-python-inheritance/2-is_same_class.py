@@ -4,4 +4,4 @@
 
 def is_same_class(obj, a_class):
     """Checks if the obj is fron class a_class"""
-    return isinstance(obj, a_class)
+    return obj is a_class
