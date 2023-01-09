@@ -9,7 +9,7 @@ Test cases
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 	>>> nums = BaseGeometry()
 	>>> nums.integer_validator("ade", 2)
-	>>> nums.integer_validator("ade", -1)
+	>>> nums.integer_validator("ade", 0)
 	Traceback (most recent call last):
 	ValueError: ade must be greater than 0
 	>>> nums.integer_validator("ade", None)
