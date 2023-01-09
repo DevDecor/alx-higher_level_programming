@@ -18,6 +18,5 @@ Test cases
 	>>> nums.append(23)
 	>>> nums.print_sorted()
 	[-1, 0, 2, 4, 5, 23, 23, 43]
-	>>> nums.__class__
 
 That is all
