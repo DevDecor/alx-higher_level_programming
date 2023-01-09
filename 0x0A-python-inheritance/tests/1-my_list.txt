@@ -1,0 +1,22 @@
+=================
+My list test file
+=================
+
+Test cases
+==========
+
+::
+	>>> MyList = __import__('1-my_list').MyList
+	>>> nums = MyList()
+	>>> nums.append(2)
+	>>> nums.append(-1)
+	>>> nums.append(4)
+	>>> nums.append(43)
+	>>> nums.append(0)
+	>>> nums.append(5)
+	>>> nums.append(23)
+	>>> nums.append(23)
+	>>> nums.print_sorted()
+	[-1, 0, 2, 4, 5, 23, 23, 43]
+
+That is all
