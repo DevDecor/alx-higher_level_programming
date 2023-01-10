@@ -7,6 +7,6 @@ import json
 def load_from_json_file(filename):
     """Prints file content"""
     with open(filename, 'w') as f:
-        x = json.loads(f)
+        x = json.loads(f.read())
     f.close()
     return x
