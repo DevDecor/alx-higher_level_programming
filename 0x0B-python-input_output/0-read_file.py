@@ -6,3 +6,4 @@ def read_file(filename=""):
     """Prints file content"""
     with open(filename) as f:
         print(f.read(), end='')
+    f.close()

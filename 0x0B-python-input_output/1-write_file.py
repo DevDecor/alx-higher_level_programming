@@ -5,4 +5,6 @@
 def write_file(filename="", text=""):
     """Prints file content"""
     with open(filename, 'w') as f:
-        f.write(text)
+        x = f.write(text)
+    f.close()
+    return x
