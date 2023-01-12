@@ -13,7 +13,7 @@ if __name__ == "__main__":
     del argv[0]
     try:
         obj = load_from_json_file(file)
-    except:
+    except e:
         obj = []
     obj = obj + argv
     save_to_json_file(obj, file)
