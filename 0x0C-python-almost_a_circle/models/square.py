@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Python module"""
-#Rectangle = __import__('rectangle').Rectangle
 from models.rectangle import Rectangle
 """Rectangle"""
 
