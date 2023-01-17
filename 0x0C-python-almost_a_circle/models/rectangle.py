@@ -97,10 +97,23 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the parameters"""
         ags = tuple(args[:])
         things = [self.id, self.width, self.height, self.x, self.y]
-        for i in range(len(ags)):
-            things[i] = ags[i]
+        if bool(args) or len(args) > 0:
+            for i in range(len(ags)):
+                things[i] = ags[i]
+            self.id, self.width, self.height, self.x, self.y = tuple(things)
+            return
+        di = {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+            }
+        for key, value in kwargs.items():
+            di[key] = value
+        things = di.values()
         self.id, self.width, self.height, self.x, self.y = tuple(things)
