@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Python module"""
-from rectangle import Rectangle
+#Rectangle = __import__('rectangle').Rectangle
+from models.rectangle import Rectangle
 """Rectangle"""
 
 
@@ -13,4 +14,4 @@ class Square(Rectangle):
     def __str__(self):
         """String overloading"""
         return "[Square] ({}) {}/{} - {}".format(
-                self.id, self.x, self.y, self.size)
+                self.id, self.x, self.y, self.width)
