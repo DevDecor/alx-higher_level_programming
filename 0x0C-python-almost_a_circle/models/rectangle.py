@@ -117,3 +117,13 @@ class Rectangle(Base):
             di[key] = value
         things = di.values()
         self.id, self.width, self.height, self.x, self.y = tuple(things)
+
+    def to_dictionary(self):
+        """Dictionary"""
+        return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+            }

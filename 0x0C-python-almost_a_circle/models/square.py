@@ -45,3 +45,12 @@ class Square(Rectangle):
             di[key] = value
         things = di.values()
         self.id, self.size, self.x, self.y = tuple(things)
+
+    def to_dictionary(self):
+        """Dictionary"""
+        return {
+                "id": self.id,
+                "size": self.size,
+                "x": self.x,
+                "y": self.y
+            }
