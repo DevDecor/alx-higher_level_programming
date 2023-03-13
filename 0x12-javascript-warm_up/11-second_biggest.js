@@ -7,7 +7,7 @@ let nums = [...process.argv];
 nums.splice(0, 2);
 
 // converts all the arguments to integers
-nums = nums.map(e => parseInt(e));
+nums = nums.map(e => +e);
 // find the maximum number
 const max = Math.max(...nums);
 // removes the maximum number
