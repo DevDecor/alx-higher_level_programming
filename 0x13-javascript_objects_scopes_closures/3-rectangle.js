@@ -8,7 +8,6 @@ class Rectangle {
   }
 
   print () {
-    if (!this.height || !this.width) return;
     const row = new Array(this.width).fill('X').join('');
     for (let i = 0; i < this.height; i++) console.log(row);
   }
