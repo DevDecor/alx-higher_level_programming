@@ -2,16 +2,14 @@
 const dict = require('./101-data').dict;
 
 const totalist = Object.entries(dict);
-const vals = Object.values(dict);
+const vals = Object.values(dict).map(e=>e.toString());
 const valsUniq = [...new Set(vals)];
 const newDict = {};
-for (const j in valsUniq) {
-  const list = [];
-  for (const k in totalist) {
-    if (totalist[k][1] === valsUniq[j]) {
-      list.unshift(totalist[k][0]);
-    }
-  }
-  newDict[valsUniq[j]] = list;
-}
+valsUniq.sort().forEach(e=>{
+  newDict[e] = [];
+});
+totalist.map(e=>e.map(f=>f.toString())).forEach(e=>{
+  newDict[e[1]].push(e[0]);
+  newDict[e[1]].sort();
+})
 console.log(newDict);
