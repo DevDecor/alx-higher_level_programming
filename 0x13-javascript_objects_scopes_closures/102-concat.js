@@ -1,6 +1,14 @@
 #!/usr/bin/node
 const fs = require('fs');
 
-const fArg = fs.readFileSync(process.argv[2]).toString();
-const sArg = fs.readFileSync(process.argv[3]).toString();
-fs.writeFileSync(process.argv[4], fArg + sArg);
+const { argv } = process;
+
+if (argv.length >= 5) {
+  const fArg = fs.createReadStream(argv[2]);
+  const sArg = fs.createReadStream(argv[3]);
+  const output = fs.createWriteStream(argv[4]);
+  fArg.pipe(output, { end: false });
+  fArg.on('end', () => {
+    sArg.pipe(output);
+  });
+}
