@@ -18,5 +18,4 @@ if __name__ == "__main__":
                    ORDER BY cities.id ASC;""")
     rows = cursor.fetchall()
 
-    print(', '.join([row[1] for row in rows if row[2]==sys.argv[4]]))
-
+    print(', '.join([row[1] for row in rows if row[2] == sys.argv[4]]))
