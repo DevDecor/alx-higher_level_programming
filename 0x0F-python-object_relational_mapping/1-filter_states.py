@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""Mysql module
-
+"""Mysql module that fetches all states from states database
+ Usage: ./1-lter_states.py
+                    <user>
+                    <password>
+                    <database>
     Fetches all states
     from the database
 """
