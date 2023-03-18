@@ -16,6 +16,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)()
     Session.add(State(name='Louisiana'))
+    Session.commit()
     state = Session.query(State).filter_by(name='Louisiana').first()
     if state:
         print(f'{state.id}')
