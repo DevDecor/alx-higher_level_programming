@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Mysql module"""
+"""Mysql module
+
+    Fetches all states from the database
+"""
 
 import MySQLdb
 import sys
