@@ -16,4 +16,5 @@ class City(Base):
     state_id = Column(Integer, ForeignKey('states.id'))
     state = relationship(State, back_populates='cities')
 
+
 State.cities = relationship(City, order_by=City.id, back_populates="state")
