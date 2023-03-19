@@ -4,8 +4,8 @@
 
 """
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-Base = declarative_base()
+from model_city import Base, City
+from sqlalchemy.orm import relationship
 
 
 class State(Base):
@@ -13,3 +13,8 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
+    cities = relationship('City', order_by=City.id,
+                          back_populates="state")
+
+
+City.state = relationship('State', back_populates='cities')
