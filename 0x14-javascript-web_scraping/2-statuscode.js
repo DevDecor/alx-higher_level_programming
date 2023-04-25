@@ -3,6 +3,6 @@
 const request = require('request');
 
 request(process.argv[2], (err, data) => {
-  if (err) return console.log(`code ${err.status}`, err);
-  console.log(data.statusCode);
+  if (err) return console.log(`code ${err.status}`);
+  console.log(`code: ${data.statusCode}`);
 });
