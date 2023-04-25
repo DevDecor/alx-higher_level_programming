@@ -1,10 +1,12 @@
 #!/usr/bin/node
-// Reads the content of a file
 const request = require('request');
-
-request('https://swapi-api.alx-tools.com/api/films', (err, data, body) => {
-  if (err) return console.log(err);
-  console.log(JSON.parse(body).results.filter(e => {
-    return e.characters.includes('https://swapi-api.alx-tools.com/api/people/18/');
-  }).length);
+request(process.argv[2], function (error, response, body) {
+  if (!error) {
+    const results = JSON.parse(body).results;
+    console.log(results.reduce((count, movie) => {
+      return movie.characters.find((character) => character.endsWith('/18/'))
+        ? count + 1
+        : count;
+    }, 0));
+  }
 });
