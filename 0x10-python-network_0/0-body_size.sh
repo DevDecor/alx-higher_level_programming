@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 "Prints the size downloaded"
 url=$1
 
