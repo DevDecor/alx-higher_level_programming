@@ -10,5 +10,3 @@ with request.urlopen('https://alx-intranet.hbtn.io/status') as response:
 \t- content: {res}
 \t- utf8 content: {str(res, 'utf-8')}"""
     print(temp)
-with request.urlopen('https://alx-intranet.hbtn.io/status') as request_url:
-    print(request_url.read())
