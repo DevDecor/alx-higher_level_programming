@@ -4,6 +4,7 @@
 import urllib.request as request
 url = ''
 with request.urlopen('https://alx-intranet.hbtn.io/status') as response:
+    """Fires a get request"""
     res = response.read()
     temp = f"""Body response:
 \t- type: {type(res)}
