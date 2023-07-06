@@ -3,6 +3,7 @@
 import urllib.request
 import sys
 
-with urllib.request.urlopen(sys.argv[1]) as response:
-    """Fires a get request"""
-    print(dict(response.info())['X-Request-Id'])
+if __name__ == "__main__":
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        """Fires a get request"""
+        print(dict(response.info())['X-Request-Id'])
