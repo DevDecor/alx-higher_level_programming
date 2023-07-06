@@ -8,4 +8,4 @@ if __name__ == "__main__":
     req = request.Request(sys.argv[1], data=data)
     with request.urlopen(req) as response:
         """Fires a get request"""
-        print(str(response.read))
+        print(str(response.read()))
