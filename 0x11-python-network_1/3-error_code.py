@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Fetches https://alx-intranet.hbtn.io/status"""
-from urllib import request, parse
+from urllib import request, error
 import sys
 
 if __name__ == "__main__":
@@ -10,5 +10,5 @@ if __name__ == "__main__":
         with request.urlopen(sys.argv[1]) as response:
             """Fires a get request"""
             print(response.read().decode('utf-8'))
-    except urllib.error.HTTPError as e:
+    except error.HTTPError as e:
         print(f"Error code: {e.code}")
