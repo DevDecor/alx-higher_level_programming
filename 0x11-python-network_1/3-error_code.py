@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""Fetches https://alx-intranet.hbtn.io/status"""
-from urllib import request, error
-import sys
+""" Python script that takes in a URL, sends a request to the URL
+and displays the body of the response (decoded in utf-8)."""
 
 if __name__ == "__main__":
-    # data = parse.urlencode({"email": sys.argv[2]}).encode('ascii')
-    # req = request.Request(sys.argv[1], data=data, method='POST')
+    import sys
+    from urllib import request, error
+    url = sys.argv[1]
+
     try:
-        with request.urlopen(sys.argv[1]) as response:
-            """Fires a get request"""
-            print(response.read().decode('utf-8'))
-    except error.HTTPError as e:
-        print(f"Error code: {e.code}")
+        with request.urlopen(url) as response:
+            print(response.read().decode('UTF-8'))
+    except error.HTTPError as error:
+        print("Error code:", error.code)
